@@ -1,139 +1,144 @@
-# Snoopy Agent Smart (SAS)
+# Snoopy Agent Smart (SAS) 工作准则
 
-> AI 智能体协作工作准则 — 让 AI 真正成为高效、可信的工作伙伴
-
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/terlivy/SAS?style=flat-square)](https://github.com/terlivy/SAS/releases)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-
----
-
-## 是什么
-
-SAS（Snoopy Agent Smart）是一整套 **AI 智能体协作工作准则与架构规范**。
-
-它解决的问题是：当你同时使用多个 AI Agent 时，如何避免它们各自为战、重复劳动、擅自做主、交付质量参差不齐？
-
-SAS 通过**标准化的六阶段工作流程**、**四铁律**和**四层角色分工**，让多个 AI Agent 像一个训练有素的团队一样高效协作。
+> **SAS = Snoopy Agent Smart** — AI 多智能体协作工作准则  
+> **核心理念**：慢即是快 — 计划先行，逻辑清晰，有可执行计划，有可落地方案，有效评估周期，可控资源成本  
+> **当前版本**：v1.6.0  
+> **维护者**：SnoopyClaw (SC) · 2026-03-18 至今
 
 ---
 
-## 核心特性
+## 📖 什么是 SAS？
 
-### 六阶段工作流程
+SAS 是一套运行在 [OpenClaw](https://github.com/openclaw/openclaw) 平台上的 **AI 智能体协作工作准则**，定义了多个 Agent 如何分工、审批、记录和迭代。
 
-每一个任务都严格按照以下六个阶段推进：
+它不是一个软件，而是一套**方法论 + 自动化脚本 + 插件引擎**的组合体系。
 
-```
-① 接收任务  →  ② 制定计划  →  ③ 执行工作  →  ④ 质量检查  →  ⑤ 交付成果  →  ⑥ 归档记忆
-```
-
-| 阶段 | 关键动作 |
-|------|---------|
-| 接收任务 | 需求确认、复杂度评估、资源清点 |
-| 制定计划 | 步骤拆解、风险识别、方案选型 |
-| 执行工作 | 按计划执行、关键决策实时记录 |
-| 质量检查 | 自检 → 验证 → 复核，三层把关 |
-| 交付成果 | 完整交付物 + 使用说明 + 风险提示 |
-| 归档记忆 | 关键决策入库、经验萃取、错误预防 |
-
-### 执行铁律
-
-Agent 在执行过程中必须严格遵守：
-
-- **不擅自做主** — 超出权限或存在不确定因素时，必须上报
-- **不隐瞒问题** — 发现风险立即预警，不等到爆发
-- **不重复犯错** — 历史错误库是必查项，不是可选项
-- **不浪费资源** — 选最合适的模型和工具，不盲目堆砌
-
-### 四层角色分工（CEO 模式）
-
-v1.5.0 引入的分层架构，职责清晰、权限分明：
-
-| 层级 | 角色 | 职责 |
-|------|------|------|
-| L0 | 用户（CEO） | 只参与两个决策点：计划审批 + 方案审批 |
-| L1 | 主脑 SC（项目经理） | 任务分解、主协调、对外沟通 |
-| L2 | Leader（任务负责人） | Worker 分配、进度管理、问题处理 |
-| L3 | Worker（执行者） | 按规范执行具体子任务 |
-
-### 任务复杂度分级
-
-| 等级 | 类型 | 处理流程 |
-|------|------|---------|
-| L1 | 简单 / 快速通道 | 压缩流程，快速交付 |
-| L2 | 中等 / 标准流程 | 完整六阶段，标准审核 |
-| L3 | 复杂 / 完整流程 | 全流程 + Leader 介入 + 用户深度参与 |
-
----
-
-## 版本历史
-
-| 版本 | 日期 | 核心更新 |
-|------|------|---------|
-| v1.5.0 | 2026-03-31 | CEO 模式架构：四层角色分工、权限矩阵、能力档案、任务级成绩单 |
-| v1.4.0 | 2026-03-26 | 初始版本，六阶段流程 + 执行铁律框架 |
-
-详细更新记录请查看 [迭代记录](./迭代记录/) 目录。
-
----
-
-## 文件结构
+## 🗂️ 仓库结构
 
 ```
 SAS/
-├── README.md                          # 本文件
-├── Snoopy Agent Smart (SAS)工作准则-v1.5.md   # v1.5.0 完整准则（核心文档）
-├── Snoopy Agent Smart (SAS)工作准则-v1.4.md  # v1.4.0 历史版本
-├── Snoopy Agent Smart (SAS)可行性分析报告.md  # 项目可行性分析
-├── Snoopy Agent Smart (SAS)实施计划.md        # 落地实施路线图
-├── 迭代记录/                          # 版本迭代过程文档
-└── 调研文档/                           # 调研过程中产生的参考文档
-    ├── Gemini-2.0-pro调研/
-    └── deepseek-v3调研/
+├── README.md                          ← 你在这里
+│
+├── 01-需求调研/                        ← 📋 第一阶段：需求调研
+│   ├── Snoopy Agent Smart (SAS)需求调研-deepseek.md    # DeepSeek 调研
+│   ├── 通用需求调研提示词.md                            # 通用调研模板
+│   ├── Gemini-2.0-pro调研/                             # Gemini 调研
+│   └── deepseek-v3调研/                                # DeepSeek-V3 调研
+│
+├── 02-可行性分析/                      ← 🔬 第二阶段：可行性分析
+│   ├── Snoopy Agent Smart (SAS) 可行性分析报告.md       # 完整可行性报告（52KB）
+│   └── 迭代智能体配置与工作规范.md                       # 技术架构规范
+│
+├── 03-实施计划/                        ← 📐 第三阶段：实施计划
+│   └── Snoopy Agent Smart (SAS) 实施计划.md             # 全量实施计划（32KB）
+│
+├── 04-工作准则/                        ← 📏 核心文档：SAS 准则各版本
+│   ├── 工作准则-v1.0.md                                   # v1.0 基础版
+│   ├── Snoopy Agent Smart (SAS)工作准则-v1.4.md           # v1.4 六阶段门控
+│   ├── Snoopy Agent Smart (SAS)工作准则-v1.5.md           # v1.5 CEO模式
+│   └── Snoopy Agent Smart (SAS)工作准则-v1.6.md           # v1.6 数据驱动 ⭐ 最新
+│
+├── 05-构建与验证/                      ← 🔧 第四阶段：构建与验证
+│   ├── SAS-v1.5-完整建设方案.md                          # v1.5 完整建设方案
+│   ├── SAS-V1.5-构建实录.md                              # v1.5 构建过程记录
+│   ├── SAS-V1.5-验证报告.md                              # v1.5 验证结果
+│   └── SAS-V1.5-构建完成报告.md                          # v1.5 交付总结
+│
+└── 06-迭代记录/                        ← 📝 版本迭代记录
+    ├── SAS-迭代记录-v1.1.0.md
+    ├── SAS-迭代记录-v1.2.0.md
+    ├── SAS-迭代记录-v1.3.0.md
+    └── SAS-迭代记录-v1.6.0.md
 ```
 
----
+## 📊 版本历史
 
-## 快速开始
+| 版本 | 日期 | 核心升级 | 状态 |
+|------|------|---------|------|
+| **v1.0** | 2026-03-19 | 基础准则，AI协作规范 | ✅ 归档 |
+| **v1.1** | 2026-03-22 | 记忆系统，持续学习 | ✅ 归档 |
+| **v1.2** | 2026-03-25 | 质量体系，代码规范 | ✅ 归档 |
+| **v1.3** | 2026-03-29 | 异常监控与恢复 | ✅ 归档 |
+| **v1.4** | 2026-03-31 | 六阶段门控流水线 | ✅ 归档 |
+| **v1.5** | 2026-04-01 | CEO模式协作架构 | ✅ 已完成 |
+| **v1.6** | 2026-04-01 | 数据驱动与风险前置 | 🔄 最新 |
 
-### 对于 AI Agent 开发者
-
-将 `Snoopy Agent Smart (SAS)工作准则-v1.5.md` 中的核心指令嵌入你的 Agent 系统提示：
+## 🏗️ SAS 体系架构
 
 ```
-你是 {AgentName}，你严格遵循 SAS v1.5.0 工作准则。
-- 工作流程：六阶段（接收任务→制定计划→执行工作→质量检查→交付成果→归档记忆）
-- 执行铁律：不擅自做主、不隐瞒问题、不重复犯错、不浪费资源
-- 你的角色：{L1/L2/L3}，权限范围：{具体权限}
+┌─────────────────────────────────────────────────────┐
+│                 L0 用户（CEO）                       │
+│           只做两件事：审批计划 + 审批方案              │
+├─────────────────────────────────────────────────────┤
+│              L1 SC Agent（主脑）                     │
+│        接收任务 → 制定计划 → 协调执行 → 汇报          │
+├──────────┬──────────┬──────────┬─────────────────────┤
+│  L2 专用  │  L2 专用  │  L2 专用  │    L3 通用          │
+│  HR       │  小文     │  天气    │   sas-default       │
+│  (GLM-5)  │ (DeepSeek)│(GLM-4.5)│  (MiniMax)         │
+├──────────┴──────────┴──────────┴─────────────────────┤
+│              L3 sas-leader（自治）                    │
+│     独立子任务 → 自主协调 → 完成交付                   │
+└─────────────────────────────────────────────────────┘
 ```
 
-### 对于团队管理者
+## 🔄 六阶段工作流程
 
-参考 [实施计划.md](./Snoopy%20Agent%20Smart%20(SAS)实施计划.md) 制定适合你团队的落地路径。
+```
+阶段1：接收任务    → 用户输入 → SC 接收
+阶段2：制定计划    → L1/L2/L3 分级 → 用户审批
+阶段3：执行工作    → SC 协调 → spawn 子任务
+阶段4：质量检查    → 自检 → 验证 → 复核
+阶段5：交付成果    → 完整交付物 + 使用说明
+阶段6：复盘归档    → 记录决策 → 经验沉淀
+```
+
+## 🤖 Agent 注册（9个）
+
+| Agent | 模型 | 职责 | Workspace |
+|-------|------|------|-----------|
+| **main (SC)** | MiniMax-M2.7-highspeed | 主脑：协调、规划、汇报 | workspace |
+| **sas-leader** | MiniMax-M2.7 | 自治任务协调 | workspace-sas-leader |
+| **sas-default** | MiniMax-M2.7-highspeed | 通用子任务 | workspace-sas-default |
+| **sas-sop-expert** | MiniMax-M2.7 | 准则优化 | workspace-sas-sop-expert |
+| **xiaowen (小文)** | DeepSeek Chat | 文档、代码 | workspace-xiaowen |
+| **hr** | GLM-5-Turbo | 招聘、团队管理 | workspace-hr |
+| **tech-news** | GLM-5-Turbo | 科技资讯推送 | workspace-tech-news |
+| **doc-expert** | GLM-4.7 | 文档生成 | workspace-doc-expert |
+| **weather** | GLM-4.5-Air | 天气播报 | workspace-weather |
+
+## 🔗 关联仓库
+
+| 仓库 | 说明 | 链接 |
+|------|------|------|
+| **SAS** | 本仓库 — 准则文档 | [terlivy/SAS](https://github.com/terlivy/SAS) |
+| **SAS-script** | 自动化脚本（12个） | [terlivy/SAS-script](https://github.com/terlivy/SAS-script) |
+| **SAS-plug-in** | sas-engine 插件（开发中） | [terlivy/SAS-plug-in](https://github.com/terlivy/SAS-plug-in) |
+| **snoopyclaw-skills** | SC 自建技能 | [terlivy/snoopyclaw-skills](https://github.com/terlivy/snoopyclaw-skills) |
+
+## 🛠️ 自动化基础设施
+
+- **task_decompose.py** — 任务自动拆解（规则引擎，L1/L2/L3 分级）
+- **task_logger.py** — 任务日志记录（JSONL 格式）
+- **sas_sop_expert_v2.py** — SOP 专家每日优化
+- **sas_daily_check.py** — 每日系统巡检
+- **sas_alert_system.py** — 告警系统
+- **sas_github_sync.py** — GitHub 同步
+
+## 📈 构建完成度
+
+| 模块 | 进度 | 说明 |
+|------|------|------|
+| 准则文档 | 100% | v1.0 → v1.6 完整演进 |
+| OpenClaw 集成 | 90% | 9 Agent + SOUL.md + alsoAllow |
+| 自动化脚本 | 100% | 12 个脚本全部就位 |
+| 定时任务 | 100% | 天气 + 资讯 + SOP优化 |
+| 插件引擎 | 5% | sas-engine 框架存在，核心未开发 |
+
+## 📜 License
+
+内部项目，仅供 SnoopyClaw 团队使用。
 
 ---
 
-## 相关仓库
-
-| 仓库 | 说明 |
-|------|------|
-| [SAS-plug-in](https://github.com/terlivy/SAS-plug-in) | SAS 引擎插件（阶段门控、自动审批） |
-| [SAS-script](https://github.com/terlivy/SAS-script) | 10 个自动化脚本工具集 |
-| [snoopyclaw-skills](https://github.com/terlivy/snoopyclaw-skills) | OpenClaw Agent 技能配置（Harness、Leader 等） |
-
----
-
-## 免责声明
-
-SAS 是一套工作方法论，不对 AI 生成内容的准确性、合法性、合规性负责。使用者在部署和应用过程中需自行判断风险，承担相应责任。
-
----
-
-## 联系方式
-
-- **GitHub Issues**: https://github.com/terlivy/SAS/issues
-- **项目维护者**: terlivy
-
----
-
-*SAS — 让 AI 协作有章可循*
+_由 SnoopyClaw 🐾🦞 维护 · 基于 OpenClaw 平台 · "慢即是快"_
