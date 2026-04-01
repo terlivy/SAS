@@ -4,7 +4,8 @@
 > 日期：2026-04-01
 > 状态：✅ 已完成（OpenClaw集成验证通过，2026-04-01 19:45）
 > 验证人：SnoopyClaw (SC)
-> 面向：GLM-5-Turbo 可行性评估
+> 面向：SAS v1.5 CEO 模式落地验证
+> 模型分配：sas-default = MiniMax-M2.7-highspeed（主），GLM-5-Turbo（备）
 
 ---
 
@@ -236,13 +237,13 @@ lossless-claw-enhanced:
 
 ```
 # 每日早上8点（北京时间）检查准则变更
-30 8 * * * python3 /home/openclaw/scripts/sas_daily_check.py
+0 8 * * * cd /home/openclaw && python3 scripts/sas_daily_check.py
 
 # 每日晚上9点（北京时间）生成执行分析报告
-0 21 * * * python3 /home/openclaw/scripts/sas_sop_expert_v2.py
+0 21 * * * cd /home/openclaw && python3 scripts/sas_sop_expert_v2.py
 
 # 每小时检查告警条件
-0 * * * * python3 /home/openclaw/scripts/sas_alert_system.py
+0 * * * * cd /home/openclaw && python3 scripts/sas_alert_system.py
 ```
 
 #### 5. SOUL.md 指令注入
@@ -394,9 +395,13 @@ lossless-claw-enhanced:
 ### SAS-script 脚本
 
 ```
-/home/openclaw/scripts/            ← WSL 部署路径（软链接或复制）
-~/.openclaw/workspace/task_decompose.py  ← 任务拆解脚本（已部署）
+/home/openclaw/scripts/                        ← Git 仓库根目录（同步 GitHub SAS-script）
+/home/openclaw/scripts/scripts/*.py            ← 实际脚本位置（12个）
+/home/openclaw/scripts/task_decompose.py       ← 软链接 → scripts/（兼容旧路径）
 ```
+
+**Git 同步状态**：✅ 与 SAS-script 远程仓库同步（0 ahead/behind）
+**Cron 命令**：`cd /home/openclaw && python3 scripts/sas_xxx.py`
 
 ### GitHub 仓库
 
