@@ -1,0 +1,277 @@
+{
+  "nodes": [
+    {
+      "id": "sas",
+      "label": "SAS (Snoopy Agent Smart)",
+      "file_type": "concept",
+      "source_file": "README.md"
+    },
+    {
+      "id": "sc",
+      "label": "SC (SnoopyClaw 主脑)",
+      "file_type": "concept",
+      "source_file": "README.md"
+    },
+    {
+      "id": "slow-is-fast",
+      "label": "慢即是快",
+      "file_type": "concept",
+      "source_file": "04-工作准则/Snoopy Agent Smart (SAS)工作准则-v1.5.md"
+    },
+    {
+      "id": "ceo-mode",
+      "label": "CEO 模式协作架构",
+      "file_type": "concept",
+      "source_file": "04-工作准则/Snoopy Agent Smart (SAS)工作准则-v1.5.md"
+    },
+    {
+      "id": "six-phase",
+      "label": "六阶段工作流程",
+      "file_type": "concept",
+      "source_file": "README.md"
+    },
+    {
+      "id": "agent-main",
+      "label": "main (SC)",
+      "file_type": "agent",
+      "source_file": "README.md"
+    },
+    {
+      "id": "agent-sas-leader",
+      "label": "sas-leader",
+      "file_type": "agent",
+      "source_file": "README.md"
+    },
+    {
+      "id": "agent-sas-default",
+      "label": "sas-default",
+      "file_type": "agent",
+      "source_file": "README.md"
+    },
+    {
+      "id": "model-m27-highspeed",
+      "label": "MiniMax-M2.7-highspeed",
+      "file_type": "model",
+      "source_file": "大模型信息与Agent分配依据.md"
+    },
+    {
+      "id": "model-m27",
+      "label": "MiniMax-M2.7",
+      "file_type": "model",
+      "source_file": "大模型信息与Agent分配依据.md"
+    },
+    {
+      "id": "model-deepseek-chat",
+      "label": "DeepSeek Chat",
+      "file_type": "model",
+      "source_file": "大模型信息与Agent分配依据.md"
+    },
+    {
+      "id": "tool-openclaw",
+      "label": "OpenClaw 平台",
+      "file_type": "tool",
+      "source_file": "04-工作准则/Snoopy Agent Smart (SAS)工作准则-v1.5.md"
+    },
+    {
+      "id": "tool-task-decompose",
+      "label": "task_decompose.py",
+      "file_type": "tool",
+      "source_file": "05-构建与验证/SAS-V1.5-构建实录.md"
+    },
+    {
+      "id": "tool-memory-lancedb",
+      "label": "memory-lancedb-pro",
+      "file_type": "tool",
+      "source_file": "05-构建与验证/SAS-V1.5-构建实录.md"
+    },
+    {
+      "id": "phase-1",
+      "label": "阶段1: 接收任务",
+      "file_type": "phase",
+      "source_file": "README.md"
+    },
+    {
+      "id": "phase-2",
+      "label": "阶段2: 制定计划",
+      "file_type": "phase",
+      "source_file": "README.md"
+    },
+    {
+      "id": "phase-3",
+      "label": "阶段3: 执行工作",
+      "file_type": "phase",
+      "source_file": "README.md"
+    },
+    {
+      "id": "phase-4",
+      "label": "阶段4: 质量检查",
+      "file_type": "phase",
+      "source_file": "README.md"
+    },
+    {
+      "id": "phase-5",
+      "label": "阶段5: 交付成果",
+      "file_type": "phase",
+      "source_file": "README.md"
+    },
+    {
+      "id": "phase-6",
+      "label": "阶段6: 复盘归档",
+      "file_type": "phase",
+      "source_file": "README.md"
+    },
+    {
+      "id": "sas-v1-5",
+      "label": "SAS v1.5",
+      "file_type": "version",
+      "source_file": "README.md"
+    },
+    {
+      "id": "sas-v1-6",
+      "label": "SAS v1.6",
+      "file_type": "version",
+      "source_file": "README.md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "sc",
+      "target": "sas",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "source": "slow-is-fast",
+      "target": "sas",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "source": "ceo-mode",
+      "target": "sas",
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "04-工作准则/Snoopy Agent Smart (SAS)工作准则-v1.5.md"
+    },
+    {
+      "source": "six-phase",
+      "target": "sas",
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "source": "six-phase",
+      "target": "phase-1",
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "source": "six-phase",
+      "target": "phase-2",
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "source": "six-phase",
+      "target": "phase-3",
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "source": "six-phase",
+      "target": "phase-4",
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "source": "six-phase",
+      "target": "phase-5",
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "source": "six-phase",
+      "target": "phase-6",
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "source": "agent-main",
+      "target": "model-m27-highspeed",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "大模型信息与Agent分配依据.md"
+    },
+    {
+      "source": "agent-sas-leader",
+      "target": "model-m27",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "大模型信息与Agent分配依据.md"
+    },
+    {
+      "source": "agent-sas-default",
+      "target": "model-m27-highspeed",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "大模型信息与Agent分配依据.md"
+    },
+    {
+      "source": "tool-openclaw",
+      "target": "sas",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "source": "tool-task-decompose",
+      "target": "phase-2",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "05-构建与验证/SAS-V1.5-构建实录.md"
+    },
+    {
+      "source": "tool-memory-lancedb",
+      "target": "sc",
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "05-构建与验证/SAS-V1.5-构建实录.md"
+    },
+    {
+      "source": "sas-v1-6",
+      "target": "sas-v1-5",
+      "relation": "version_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    }
+  ],
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

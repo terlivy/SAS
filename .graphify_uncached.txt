@@ -1,0 +1,22 @@
+大模型信息与Agent分配依据.md
+SAS-V1.5-构建实录.md
+README.md
+04-工作准则/Snoopy Agent Smart (SAS)工作准则-v1.4.md
+04-工作准则/Snoopy Agent Smart (SAS)工作准则-v1.5.md
+04-工作准则/工作准则-v1.0.md
+02-可行性分析/Snoopy Agent Smart (SAS) 可行性分析报告.md
+02-可行性分析/迭代智能体配置与工作规范.md
+01-需求调研/通用需求调研提示词.md
+01-需求调研/Snoopy Agent Smart (SAS)需求调研-deepseek.md
+01-需求调研/Gemini-2.0-pro调研/Snoopy Agent Smart (SAS)需求调研（1）-Gemini-2.0-pro.md
+01-需求调研/deepseek-v3调研/Snoopy Agent Smart (SAS) 需求调研（1）-deepseek-v3.md
+05-构建与验证/SAS-v1.5-完整建设方案.md
+05-构建与验证/SAS-V1.5-验证报告.md
+05-构建与验证/SAS-V1.5-构建实录.md
+05-构建与验证/SAS-V1.5-构建完成报告.md
+03-实施计划/Snoopy Agent Smart (SAS) 实施计划.md
+06-迭代记录/SAS-迭代记录-v1.2.0.md
+06-迭代记录/SAS-迭代记录-v1.3.0.md
+06-迭代记录/SAS-迭代记录-v1.6.0.md
+06-迭代记录/SAS-迭代记录-v1.5.0.md
+06-迭代记录/SAS-迭代记录-v1.1.0.md

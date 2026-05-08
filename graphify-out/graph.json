@@ -1,0 +1,356 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "SAS (Snoopy Agent Smart)",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "id": "sas",
+      "community": 0,
+      "norm_label": "sas (snoopy agent smart)"
+    },
+    {
+      "label": "SC (SnoopyClaw \u4e3b\u8111)",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "id": "sc",
+      "community": 0,
+      "norm_label": "sc (snoopyclaw \u4e3b\u8111)"
+    },
+    {
+      "label": "\u6162\u5373\u662f\u5feb",
+      "file_type": "concept",
+      "source_file": "04-\u5de5\u4f5c\u51c6\u5219/Snoopy Agent Smart (SAS)\u5de5\u4f5c\u51c6\u5219-v1.5.md",
+      "id": "slow-is-fast",
+      "community": 0,
+      "norm_label": "\u6162\u5373\u662f\u5feb"
+    },
+    {
+      "label": "CEO \u6a21\u5f0f\u534f\u4f5c\u67b6\u6784",
+      "file_type": "concept",
+      "source_file": "04-\u5de5\u4f5c\u51c6\u5219/Snoopy Agent Smart (SAS)\u5de5\u4f5c\u51c6\u5219-v1.5.md",
+      "id": "ceo-mode",
+      "community": 0,
+      "norm_label": "ceo \u6a21\u5f0f\u534f\u4f5c\u67b6\u6784"
+    },
+    {
+      "label": "\u516d\u9636\u6bb5\u5de5\u4f5c\u6d41\u7a0b",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "id": "six-phase",
+      "community": 1,
+      "norm_label": "\u516d\u9636\u6bb5\u5de5\u4f5c\u6d41\u7a0b"
+    },
+    {
+      "label": "main (SC)",
+      "file_type": "agent",
+      "source_file": "README.md",
+      "id": "agent-main",
+      "community": 2,
+      "norm_label": "main (sc)"
+    },
+    {
+      "label": "sas-leader",
+      "file_type": "agent",
+      "source_file": "README.md",
+      "id": "agent-sas-leader",
+      "community": 3,
+      "norm_label": "sas-leader"
+    },
+    {
+      "label": "sas-default",
+      "file_type": "agent",
+      "source_file": "README.md",
+      "id": "agent-sas-default",
+      "community": 2,
+      "norm_label": "sas-default"
+    },
+    {
+      "label": "MiniMax-M2.7-highspeed",
+      "file_type": "model",
+      "source_file": "\u5927\u6a21\u578b\u4fe1\u606f\u4e0eAgent\u5206\u914d\u4f9d\u636e.md",
+      "id": "model-m27-highspeed",
+      "community": 2,
+      "norm_label": "minimax-m2.7-highspeed"
+    },
+    {
+      "label": "MiniMax-M2.7",
+      "file_type": "model",
+      "source_file": "\u5927\u6a21\u578b\u4fe1\u606f\u4e0eAgent\u5206\u914d\u4f9d\u636e.md",
+      "id": "model-m27",
+      "community": 3,
+      "norm_label": "minimax-m2.7"
+    },
+    {
+      "label": "DeepSeek Chat",
+      "file_type": "model",
+      "source_file": "\u5927\u6a21\u578b\u4fe1\u606f\u4e0eAgent\u5206\u914d\u4f9d\u636e.md",
+      "id": "model-deepseek-chat",
+      "community": 6,
+      "norm_label": "deepseek chat"
+    },
+    {
+      "label": "OpenClaw \u5e73\u53f0",
+      "file_type": "tool",
+      "source_file": "04-\u5de5\u4f5c\u51c6\u5219/Snoopy Agent Smart (SAS)\u5de5\u4f5c\u51c6\u5219-v1.5.md",
+      "id": "tool-openclaw",
+      "community": 0,
+      "norm_label": "openclaw \u5e73\u53f0"
+    },
+    {
+      "label": "task_decompose.py",
+      "file_type": "tool",
+      "source_file": "05-\u6784\u5efa\u4e0e\u9a8c\u8bc1/SAS-V1.5-\u6784\u5efa\u5b9e\u5f55.md",
+      "id": "tool-task-decompose",
+      "community": 4,
+      "norm_label": "task_decompose.py"
+    },
+    {
+      "label": "memory-lancedb-pro",
+      "file_type": "tool",
+      "source_file": "05-\u6784\u5efa\u4e0e\u9a8c\u8bc1/SAS-V1.5-\u6784\u5efa\u5b9e\u5f55.md",
+      "id": "tool-memory-lancedb",
+      "community": 0,
+      "norm_label": "memory-lancedb-pro"
+    },
+    {
+      "label": "\u9636\u6bb51: \u63a5\u6536\u4efb\u52a1",
+      "file_type": "phase",
+      "source_file": "README.md",
+      "id": "phase-1",
+      "community": 1,
+      "norm_label": "\u9636\u6bb51: \u63a5\u6536\u4efb\u52a1"
+    },
+    {
+      "label": "\u9636\u6bb52: \u5236\u5b9a\u8ba1\u5212",
+      "file_type": "phase",
+      "source_file": "README.md",
+      "id": "phase-2",
+      "community": 4,
+      "norm_label": "\u9636\u6bb52: \u5236\u5b9a\u8ba1\u5212"
+    },
+    {
+      "label": "\u9636\u6bb53: \u6267\u884c\u5de5\u4f5c",
+      "file_type": "phase",
+      "source_file": "README.md",
+      "id": "phase-3",
+      "community": 1,
+      "norm_label": "\u9636\u6bb53: \u6267\u884c\u5de5\u4f5c"
+    },
+    {
+      "label": "\u9636\u6bb54: \u8d28\u91cf\u68c0\u67e5",
+      "file_type": "phase",
+      "source_file": "README.md",
+      "id": "phase-4",
+      "community": 1,
+      "norm_label": "\u9636\u6bb54: \u8d28\u91cf\u68c0\u67e5"
+    },
+    {
+      "label": "\u9636\u6bb55: \u4ea4\u4ed8\u6210\u679c",
+      "file_type": "phase",
+      "source_file": "README.md",
+      "id": "phase-5",
+      "community": 1,
+      "norm_label": "\u9636\u6bb55: \u4ea4\u4ed8\u6210\u679c"
+    },
+    {
+      "label": "\u9636\u6bb56: \u590d\u76d8\u5f52\u6863",
+      "file_type": "phase",
+      "source_file": "README.md",
+      "id": "phase-6",
+      "community": 1,
+      "norm_label": "\u9636\u6bb56: \u590d\u76d8\u5f52\u6863"
+    },
+    {
+      "label": "SAS v1.5",
+      "file_type": "version",
+      "source_file": "README.md",
+      "id": "sas-v1-5",
+      "community": 5,
+      "norm_label": "sas v1.5"
+    },
+    {
+      "label": "SAS v1.6",
+      "file_type": "version",
+      "source_file": "README.md",
+      "id": "sas-v1-6",
+      "community": 5,
+      "norm_label": "sas v1.6"
+    }
+  ],
+  "links": [
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "_src": "sc",
+      "_tgt": "sas",
+      "source": "sas",
+      "target": "sc"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "_src": "slow-is-fast",
+      "_tgt": "sas",
+      "source": "sas",
+      "target": "slow-is-fast"
+    },
+    {
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "04-\u5de5\u4f5c\u51c6\u5219/Snoopy Agent Smart (SAS)\u5de5\u4f5c\u51c6\u5219-v1.5.md",
+      "_src": "ceo-mode",
+      "_tgt": "sas",
+      "source": "sas",
+      "target": "ceo-mode"
+    },
+    {
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "_src": "six-phase",
+      "_tgt": "sas",
+      "source": "sas",
+      "target": "six-phase"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "_src": "tool-openclaw",
+      "_tgt": "sas",
+      "source": "sas",
+      "target": "tool-openclaw"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "05-\u6784\u5efa\u4e0e\u9a8c\u8bc1/SAS-V1.5-\u6784\u5efa\u5b9e\u5f55.md",
+      "_src": "tool-memory-lancedb",
+      "_tgt": "sc",
+      "source": "sc",
+      "target": "tool-memory-lancedb"
+    },
+    {
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "_src": "six-phase",
+      "_tgt": "phase-1",
+      "source": "six-phase",
+      "target": "phase-1"
+    },
+    {
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "_src": "six-phase",
+      "_tgt": "phase-2",
+      "source": "six-phase",
+      "target": "phase-2"
+    },
+    {
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "_src": "six-phase",
+      "_tgt": "phase-3",
+      "source": "six-phase",
+      "target": "phase-3"
+    },
+    {
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "_src": "six-phase",
+      "_tgt": "phase-4",
+      "source": "six-phase",
+      "target": "phase-4"
+    },
+    {
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "_src": "six-phase",
+      "_tgt": "phase-5",
+      "source": "six-phase",
+      "target": "phase-5"
+    },
+    {
+      "relation": "part_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "_src": "six-phase",
+      "_tgt": "phase-6",
+      "source": "six-phase",
+      "target": "phase-6"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "\u5927\u6a21\u578b\u4fe1\u606f\u4e0eAgent\u5206\u914d\u4f9d\u636e.md",
+      "_src": "agent-main",
+      "_tgt": "model-m27-highspeed",
+      "source": "agent-main",
+      "target": "model-m27-highspeed"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "\u5927\u6a21\u578b\u4fe1\u606f\u4e0eAgent\u5206\u914d\u4f9d\u636e.md",
+      "_src": "agent-sas-leader",
+      "_tgt": "model-m27",
+      "source": "agent-sas-leader",
+      "target": "model-m27"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "\u5927\u6a21\u578b\u4fe1\u606f\u4e0eAgent\u5206\u914d\u4f9d\u636e.md",
+      "_src": "agent-sas-default",
+      "_tgt": "model-m27-highspeed",
+      "source": "agent-sas-default",
+      "target": "model-m27-highspeed"
+    },
+    {
+      "relation": "uses",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "05-\u6784\u5efa\u4e0e\u9a8c\u8bc1/SAS-V1.5-\u6784\u5efa\u5b9e\u5f55.md",
+      "_src": "tool-task-decompose",
+      "_tgt": "phase-2",
+      "source": "tool-task-decompose",
+      "target": "phase-2"
+    },
+    {
+      "relation": "version_of",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "_src": "sas-v1-6",
+      "_tgt": "sas-v1-5",
+      "source": "sas-v1-5",
+      "target": "sas-v1-6"
+    }
+  ],
+  "hyperedges": []
+}

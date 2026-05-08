@@ -1,0 +1,175 @@
+{
+  "communities": {
+    "0": [
+      "ceo-mode",
+      "sas",
+      "sc",
+      "slow-is-fast",
+      "tool-memory-lancedb",
+      "tool-openclaw"
+    ],
+    "1": [
+      "phase-1",
+      "phase-3",
+      "phase-4",
+      "phase-5",
+      "phase-6",
+      "six-phase"
+    ],
+    "2": [
+      "agent-main",
+      "agent-sas-default",
+      "model-m27-highspeed"
+    ],
+    "3": [
+      "agent-sas-leader",
+      "model-m27"
+    ],
+    "4": [
+      "phase-2",
+      "tool-task-decompose"
+    ],
+    "5": [
+      "sas-v1-5",
+      "sas-v1-6"
+    ],
+    "6": [
+      "model-deepseek-chat"
+    ]
+  },
+  "cohesion": {
+    "0": 0.33,
+    "1": 0.33,
+    "2": 0.67,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 1.0,
+    "6": 1.0
+  },
+  "gods": [
+    {
+      "id": "six-phase",
+      "label": "\u516d\u9636\u6bb5\u5de5\u4f5c\u6d41\u7a0b",
+      "edges": 7
+    },
+    {
+      "id": "sas",
+      "label": "SAS (Snoopy Agent Smart)",
+      "edges": 5
+    },
+    {
+      "id": "sc",
+      "label": "SC (SnoopyClaw \u4e3b\u8111)",
+      "edges": 2
+    },
+    {
+      "id": "model-m27-highspeed",
+      "label": "MiniMax-M2.7-highspeed",
+      "edges": 2
+    },
+    {
+      "id": "phase-2",
+      "label": "\u9636\u6bb52: \u5236\u5b9a\u8ba1\u5212",
+      "edges": 2
+    },
+    {
+      "id": "slow-is-fast",
+      "label": "\u6162\u5373\u662f\u5feb",
+      "edges": 1
+    },
+    {
+      "id": "ceo-mode",
+      "label": "CEO \u6a21\u5f0f\u534f\u4f5c\u67b6\u6784",
+      "edges": 1
+    },
+    {
+      "id": "agent-main",
+      "label": "main (SC)",
+      "edges": 1
+    },
+    {
+      "id": "agent-sas-leader",
+      "label": "sas-leader",
+      "edges": 1
+    },
+    {
+      "id": "agent-sas-default",
+      "label": "sas-default",
+      "edges": 1
+    }
+  ],
+  "surprises": [
+    {
+      "source": "\u6162\u5373\u662f\u5feb",
+      "target": "SAS (Snoopy Agent Smart)",
+      "source_files": [
+        "04-\u5de5\u4f5c\u51c6\u5219/Snoopy Agent Smart (SAS)\u5de5\u4f5c\u51c6\u5219-v1.5.md",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `\u6162\u5373\u662f\u5feb` unexpectedly reaches hub `SAS (Snoopy Agent Smart)`"
+    },
+    {
+      "source": "CEO \u6a21\u5f0f\u534f\u4f5c\u67b6\u6784",
+      "target": "SAS (Snoopy Agent Smart)",
+      "source_files": [
+        "04-\u5de5\u4f5c\u51c6\u5219/Snoopy Agent Smart (SAS)\u5de5\u4f5c\u51c6\u5219-v1.5.md",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "part_of",
+      "why": "connects across different repos/directories; peripheral node `CEO \u6a21\u5f0f\u534f\u4f5c\u67b6\u6784` unexpectedly reaches hub `SAS (Snoopy Agent Smart)`"
+    },
+    {
+      "source": "OpenClaw \u5e73\u53f0",
+      "target": "SAS (Snoopy Agent Smart)",
+      "source_files": [
+        "04-\u5de5\u4f5c\u51c6\u5219/Snoopy Agent Smart (SAS)\u5de5\u4f5c\u51c6\u5219-v1.5.md",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "uses",
+      "why": "connects across different repos/directories; peripheral node `OpenClaw \u5e73\u53f0` unexpectedly reaches hub `SAS (Snoopy Agent Smart)`"
+    },
+    {
+      "source": "memory-lancedb-pro",
+      "target": "SC (SnoopyClaw \u4e3b\u8111)",
+      "source_files": [
+        "05-\u6784\u5efa\u4e0e\u9a8c\u8bc1/SAS-V1.5-\u6784\u5efa\u5b9e\u5f55.md",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "uses",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "main (SC)",
+      "target": "MiniMax-M2.7-highspeed",
+      "source_files": [
+        "README.md",
+        "\u5927\u6a21\u578b\u4fe1\u606f\u4e0eAgent\u5206\u914d\u4f9d\u636e.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "uses",
+      "why": "connects across different repos/directories"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `\u516d\u9636\u6bb5\u5de5\u4f5c\u6d41\u7a0b` connect `Community 1` to `Community 0`, `Community 4`?",
+      "why": "High betweenness centrality (0.295) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `SAS (Snoopy Agent Smart)` connect `Community 0` to `Community 1`?",
+      "why": "High betweenness centrality (0.233) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `\u6162\u5373\u662f\u5feb`, `CEO \u6a21\u5f0f\u534f\u4f5c\u67b6\u6784`, `main (SC)` to the rest of the system?",
+      "why": "17 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "communities": {
+    "0": [
+      "ceo-mode",
+      "sas",
+      "sc",
+      "slow-is-fast",
+      "tool-memory-lancedb",
+      "tool-openclaw"
+    ],
+    "1": [
+      "phase-1",
+      "phase-3",
+      "phase-4",
+      "phase-5",
+      "phase-6",
+      "six-phase"
+    ],
+    "2": [
+      "agent-main",
+      "agent-sas-default",
+      "model-m27-highspeed"
+    ],
+    "3": [
+      "agent-sas-leader",
+      "model-m27"
+    ],
+    "4": [
+      "phase-2",
+      "tool-task-decompose"
+    ],
+    "5": [
+      "sas-v1-5",
+      "sas-v1-6"
+    ],
+    "6": [
+      "model-deepseek-chat"
+    ]
+  },
+  "cohesion": {
+    "0": 0.33,
+    "1": 0.33,
+    "2": 0.67,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 1.0,
+    "6": 1.0
+  },
+  "gods": [
+    {
+      "id": "six-phase",
+      "label": "六阶段工作流程",
+      "edges": 7
+    },
+    {
+      "id": "sas",
+      "label": "SAS (Snoopy Agent Smart)",
+      "edges": 5
+    },
+    {
+      "id": "sc",
+      "label": "SC (SnoopyClaw 主脑)",
+      "edges": 2
+    },
+    {
+      "id": "model-m27-highspeed",
+      "label": "MiniMax-M2.7-highspeed",
+      "edges": 2
+    },
+    {
+      "id": "phase-2",
+      "label": "阶段2: 制定计划",
+      "edges": 2
+    },
+    {
+      "id": "slow-is-fast",
+      "label": "慢即是快",
+      "edges": 1
+    },
+    {
+      "id": "ceo-mode",
+      "label": "CEO 模式协作架构",
+      "edges": 1
+    },
+    {
+      "id": "agent-main",
+      "label": "main (SC)",
+      "edges": 1
+    },
+    {
+      "id": "agent-sas-leader",
+      "label": "sas-leader",
+      "edges": 1
+    },
+    {
+      "id": "agent-sas-default",
+      "label": "sas-default",
+      "edges": 1
+    }
+  ],
+  "surprises": [
+    {
+      "source": "慢即是快",
+      "target": "SAS (Snoopy Agent Smart)",
+      "source_files": [
+        "04-工作准则/Snoopy Agent Smart (SAS)工作准则-v1.5.md",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `慢即是快` unexpectedly reaches hub `SAS (Snoopy Agent Smart)`"
+    },
+    {
+      "source": "CEO 模式协作架构",
+      "target": "SAS (Snoopy Agent Smart)",
+      "source_files": [
+        "04-工作准则/Snoopy Agent Smart (SAS)工作准则-v1.5.md",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "part_of",
+      "why": "connects across different repos/directories; peripheral node `CEO 模式协作架构` unexpectedly reaches hub `SAS (Snoopy Agent Smart)`"
+    },
+    {
+      "source": "OpenClaw 平台",
+      "target": "SAS (Snoopy Agent Smart)",
+      "source_files": [
+        "04-工作准则/Snoopy Agent Smart (SAS)工作准则-v1.5.md",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "uses",
+      "why": "connects across different repos/directories; peripheral node `OpenClaw 平台` unexpectedly reaches hub `SAS (Snoopy Agent Smart)`"
+    },
+    {
+      "source": "memory-lancedb-pro",
+      "target": "SC (SnoopyClaw 主脑)",
+      "source_files": [
+        "05-构建与验证/SAS-V1.5-构建实录.md",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "uses",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "main (SC)",
+      "target": "MiniMax-M2.7-highspeed",
+      "source_files": [
+        "README.md",
+        "大模型信息与Agent分配依据.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "uses",
+      "why": "connects across different repos/directories"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `六阶段工作流程` connect `六阶段工作流程` to `SAS 核心理念与架构`, `计划阶段工具链`?",
+      "why": "High betweenness centrality (0.295) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `SAS (Snoopy Agent Smart)` connect `SAS 核心理念与架构` to `六阶段工作流程`?",
+      "why": "High betweenness centrality (0.233) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `慢即是快`, `CEO 模式协作架构`, `main (SC)` to the rest of the system?",
+      "why": "17 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ],
+  "community_names": {
+    "0": "SAS 核心理念与架构",
+    "1": "六阶段工作流程",
+    "2": "SC主脑与默认Agent",
+    "3": "Leader Agent 与模型",
+    "4": "计划阶段工具链",
+    "5": "SAS 版本演进",
+    "6": "DeepSeek 编程模型"
+  }
+}

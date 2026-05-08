@@ -38,6 +38,17 @@
 ### 删除内容
 1. 无
 
+### Skill 路由（v1.6.0 新增）
+
+**收到任务后，优先查询 Skill Inventory：**
+- 有匹配的 Skill → 加载 Skill+选择模型
+- 没有匹配的 Skill → LLM 裸调
+
+**Skill Router 三阶段路径：**
+1. **Phase 1: Skill Inventory** — 清单匹配（立即可做）
+2. **Phase 2: Skill-Model Matrix** — tracker 积累后建立路由矩阵
+3. **Phase 3: Skill 知识图谱** — Skill 规模>100后引入图谱建模
+
 ---
 
 ## 📋 v1.5.0 变更说明
@@ -702,6 +713,13 @@ P3（低风险）→ 直接安装
 - SC 上报用户
 - 记入案例库作为反面教材
 
+**执行铁律第十三条**：
+
+> **收到任务后，优先查询 Skill Inventory，再决定是否调用 LLM 裸调。**
+>
+> 1. 有匹配 Skill → 加载 Skill 并选择最优模型组合
+> 2. 无匹配 Skill → 才使用 LLM 裸调
+> 3. 不确定时 → 先查 Inventory，避免盲目裸调浪费 Token
 
 ---
 
